@@ -58,7 +58,7 @@ export default function Home({ allPostsData }) {
       {/* Home Section */}
       <section className="home">
         <h1>Welcome to My Portfolio</h1>
-        <p>Discover my work, projects, and skills.</p>
+        <p></p>
         <a href="#projects" className="cta-button">
           View Projects
         </a>
@@ -83,7 +83,7 @@ export default function Home({ allPostsData }) {
       </section>
 
       {/* Projects Section */}
-      <section>
+      <section id="projects">
         <h2>Projects</h2>
         <div className="project-grid">
           <div className="project-item">
@@ -108,7 +108,10 @@ export default function Home({ allPostsData }) {
           align-items: center;
           gap: 1rem;
           padding: 1rem;
-          background: #ffffff;
+          background: #f4f4f4;
+          border-radius: 2rem;
+          margin-bottom: 2rem;
+          
         }
 
         .icon-wrapper {
