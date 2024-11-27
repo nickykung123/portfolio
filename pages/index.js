@@ -1,11 +1,9 @@
-import Head from 'next/head';
-import Layout from '../components/layout';
-import { getSortedPostsData } from '../lib/posts';
-import { FaFacebook, FaGithub, FaInstagram } from 'react-icons/fa';
+import Head from "next/head";
+import Layout from "../components/layout";
+import { getSortedPostsData } from "../lib/posts";
+import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 
 export default function Home({ allPostsData }) {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'your-email@example.com';
-
   return (
     <Layout home>
       <Head>
@@ -67,30 +65,41 @@ export default function Home({ allPostsData }) {
       </section>
 
       {/* About Section */}
-        <h2>About Me</h2>
-        <section className="about">
+      <h2>About Me</h2>
+      <section className="about">
         <h3>Student ID: 66026000</h3>
         <h3>Name: Kittisak Wongraja</h3>
         <h3>NickName: Nicky</h3>
         <h3>Gernder: Male</h3>
         <h3>Center name: Phayao</h3>
         <h3>Level: Normal colon</h3>
-        <h3>Faculty name: Faculty of Information and Communication Technology</h3>
-        <h3>Doctorate degree: [210706165] Bachelor of Engineering field of study. Engineering curriculum</h3>
-        </section>
+        <h3>
+          Faculty name: Faculty of Information and Communication Technology
+        </h3>
+        <h3>
+          Doctorate degree: [210706165] Bachelor of Engineering field of study.
+          Engineering curriculum
+        </h3>
+      </section>
 
       {/* Projects Section */}
-        <section id="projects" className="projects">
-          <h2>Projects</h2>
-          <div className="project-grid">
-          {allPostsData.map(({ id, title, description }) => (
-            <div key={id} className="project-item">
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </div>
-          ))}
+      <section>
+        <h2>Projects</h2>
+        <div className="project-grid">
+          <div className="project-item">
+            <h3>Project 1</h3>
+            <a href="https://melodytune.vercel.app/">
+              <img src="/images/MELODYTUNE.png" alt="Project 1"></img>
+            </a>
+          </div>
+          <div className="project-item">
+            <h3>Project 2</h3>
+            <a href="https://jobhouse-supabase.vercel.app/">
+              <img src="/images/Jobhouse.png" alt="Project 2"></img>
+            </a>
+          </div>
         </div>
-        </section>
+      </section>
 
       <style jsx>{`
         .icon {

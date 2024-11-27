@@ -1,5 +1,5 @@
 ---
-title: 'Two Forms of Pre-rendering'
+title: 'Project 2'
 date: '2022-01-01'
 ---
 
