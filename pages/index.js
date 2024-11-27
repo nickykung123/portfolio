@@ -88,13 +88,13 @@ export default function Home({ allPostsData }) {
         <div className="project-grid">
           <div className="project-item">
             <h3>Project 1</h3>
-            <a href="">
+            <a href="https://melodytune.vercel.app/">
               <img src="/images/MELODYTUNE.png" alt="Project 1"></img>
             </a>
           </div>
           <div className="project-item">
             <h3>Project 2</h3>
-            <a href="">
+            <a href="https://jobhouse-supabase.vercel.app/">
               <img src="/images/Jobhouse.png" alt="Project 2"></img>
             </a>
           </div>
