@@ -94,7 +94,7 @@ export default function Home({ allPostsData }) {
           </div>
           <div className="project-item">
             <h3>Project 2</h3>
-            <a href="https://jobhouse-supabase.vercel.app/">
+            <a href="">
               <img src="/images/Jobhouse.png" alt="Project 2"></img>
             </a>
           </div>
