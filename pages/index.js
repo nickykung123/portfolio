@@ -22,7 +22,7 @@ export default function Home({ allPostsData }) {
             aria-label="true"
             href="https://www.facebook.com/nickykung123/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel=""
             className="social-link"
           >
             <FaFacebook className="social-icon facebook" />
@@ -34,7 +34,7 @@ export default function Home({ allPostsData }) {
             aria-label="true"
             href="https://www.instagram.com/nickykung123/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel=""
             className="social-link"
           >
             <FaInstagram className="social-icon instagram" />
@@ -46,7 +46,7 @@ export default function Home({ allPostsData }) {
             aria-label="true"
             href="https://github.com/nickykung123"
             target="_blank"
-            rel="noopener noreferrer"
+            rel=""
             className="social-link"
           >
             <FaGithub className="corlor-black" />
@@ -94,7 +94,7 @@ export default function Home({ allPostsData }) {
           </div>
           <div className="project-item">
             <h3>Project 2</h3>
-            <a href="">
+            <a href="https://jobhouse-supabase.vercel.app/">
               <img src="/images/Jobhouse.png" alt="Project 2"></img>
             </a>
           </div>
