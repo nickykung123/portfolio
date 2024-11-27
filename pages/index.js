@@ -21,7 +21,7 @@ export default function Home({ allPostsData }) {
       <section className="icon">
         <div className="icon-wrapper">
           <a
-            aria-label="Facebook"
+            aria-label="true"
             href="https://www.facebook.com/nickykung123/"
             target="_blank"
             rel="noopener noreferrer"
@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
         </div>
         <div className="icon-wrapper">
           <a
-            aria-label="Instagram"
+            aria-label="true"
             href="https://www.instagram.com/nickykung123/"
             target="_blank"
             rel="noopener noreferrer"
@@ -45,20 +45,20 @@ export default function Home({ allPostsData }) {
         </div>
         <div className="icon-wrapper">
           <a
-            aria-label="Instagram"
+            aria-label="true"
             href="https://github.com/nickykung123"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
           >
-            <FaGithub className="social-icon github" />
+            <FaGithub className="corlor-black" />
             <span className="icon-label">Github</span>
           </a>
         </div>
       </section>
 
-      {/* Hero Section */}
-      <section className="hero">
+      {/* Home Section */}
+      <section className="home">
         <h1>Welcome to My Portfolio</h1>
         <p>Discover my work, projects, and skills.</p>
         <a href="#projects" className="cta-button">
@@ -67,8 +67,8 @@ export default function Home({ allPostsData }) {
       </section>
 
       {/* About Section */}
-      <section className="about">
         <h2>About Me</h2>
+        <section className="about">
         <h3>Student ID: 66026000</h3>
         <h3>Name: Kittisak Wongraja</h3>
         <h3>NickName: Nicky</h3>
@@ -77,12 +77,12 @@ export default function Home({ allPostsData }) {
         <h3>Level: Normal colon</h3>
         <h3>Faculty name: Faculty of Information and Communication Technology</h3>
         <h3>Doctorate degree: [210706165] Bachelor of Engineering field of study. Engineering curriculum</h3>
-      </section>
+        </section>
 
       {/* Projects Section */}
-      <section id="projects" className="projects">
-        <h2>Projects</h2>
-        <div className="project-grid">
+        <section id="projects" className="projects">
+          <h2>Projects</h2>
+          <div className="project-grid">
           {allPostsData.map(({ id, title, description }) => (
             <div key={id} className="project-item">
               <h3>{title}</h3>
@@ -90,7 +90,7 @@ export default function Home({ allPostsData }) {
             </div>
           ))}
         </div>
-      </section>
+        </section>
 
       <style jsx>{`
         .icon {
@@ -108,7 +108,7 @@ export default function Home({ allPostsData }) {
           display: flex;
           justify-content: center;
           align-items: center;
-          transition: transform 0.3s ease-in-out;
+          transition: transform 0.5s ease-in-out;
         }
 
         .social-link {
@@ -119,82 +119,76 @@ export default function Home({ allPostsData }) {
           width: 50px;
           height: 50px;
           border-radius: 50%;
-          background: #e4e4e4;
+          background: #f4f4f4;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           transition: background 0.3s ease, box-shadow 0.3s ease;
+          color: black;
         }
 
         .social-link:hover {
-          background: #f0f0f0;
+          background: #000000;
           box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+          color: white
         }
-
-        .social-icon {
-          font-size: 2rem;
-          color: #000; /* Default color black */
-          transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .social-icon:hover {
-          transform: scale(1.2); /* Scale on hover */
-          color: #888; /* Color gray on hover */
-        }
-
-        .facebook:hover {
-          color: #3b5998; /* Facebook color on hover */
-        }
-
-        .instagram:hover {
-          color: #e4405f; /* Instagram color on hover */
-        }
+        
+        
 
         .icon-label {
           position: absolute;
-          bottom: -1.5rem;
+          bottom: -1.2rem;
           left: 50%;
           transform: translateX(-50%);
           font-size: 0.9rem;
           color: #000;
           opacity: 0;
-          transition: opacity 0.3s;
+          transition: opacity 0.5s;
         }
 
         .social-link:hover .icon-label {
           opacity: 1;
         }
 
-        .hero {
+        .home {
           text-align: center;
           padding: 2rem;
           background: #f4f4f4;
+          border-radius: 2rem
         }
 
-        .hero h1 {
+        .home h1 {
           font-size: 2.5rem;
         }
 
-        .hero p {
+        .home p {
           font-size: 1.2rem;
         }
+
 
         .cta-button {
           display: inline-block;
           margin-top: 1rem;
           padding: 0.5rem 1.5rem;
-          background: #0070f3;
+          background: #000000;
           color: #fff;
           text-decoration: none;
           border-radius: 5px;
-          transition: background 0.3s;
+          transition: background 0.5s;
         }
 
         .cta-button:hover {
-          background: #005bb5;
+          background: #FFFFFF;
+          color: #000000; 
+      }
+      
+        .about{
+          text-align: center;
+          padding: 2rem;
+          background: #f4f4f4;
+          border-radius: 2rem
         }
-
         .about,
-        .projects,
-        .contact {
+        .projects
+         {
           padding: 2rem;
         }
 
@@ -206,33 +200,11 @@ export default function Home({ allPostsData }) {
 
         .project-item {
           padding: 1rem;
-          background: #e9e9e9;
-          border-radius: 8px;
+          background: #f4f4f4;
+          border-radius: 2rem;
           text-align: center;
         }
 
-        .contact-button {
-          display: inline-block;
-          padding: 0.5rem 1rem;
-          background: #0070f3;
-          color: #fff;
-          border-radius: 5px;
-          text-decoration: none;
-          transition: background 0.3s;
-        }
-
-        .contact-button:hover {
-          background: #005bb5;
-        }
-
-        @media (max-width: 600px) {
-          .hero h1 {
-            font-size: 1.8rem;
-          }
-
-          .hero p {
-            font-size: 1rem;
-          }
         }
       `}</style>
     </Layout>
