@@ -16,7 +16,7 @@ export default function Home({ allPostsData }) {
       </Head>
 
       {/* Social Media Section */}
-      <section className="icon">
+      <section id="contact" className="icon">
         <div className="icon-wrapper">
           <a
             aria-label="true"
@@ -58,14 +58,34 @@ export default function Home({ allPostsData }) {
       {/* Home Section */}
       <section className="home">
         <h1>Welcome to My Portfolio</h1>
-        <p></p>
+        <p>
+        Hello, today I'm going to present my portfolio. My Portfolio will consist of contact , about me and Projects.
+        </p>
+        <p>
+        Contact Information - you can reach me.
+        </p>
+        <p>
+          About Me - a glimpse into my background.
+        </p>
+        <p>
+        Projects - the work I'm most proud of.
+        </p>
+        <section className="flex">
+        <a href="#contact" className="cta-button">
+          View Contact
+        </a>
+        <a href="#about" className="cta-button">
+          View About Me
+        </a>
         <a href="#projects" className="cta-button">
           View Projects
         </a>
-      </section>
+        </section>
+        
+        </section>
 
       {/* About Section */}
-      <h2>About Me</h2>
+      <h2 id="about">About Me</h2>
       <section className="about">
         <h3>Student ID: 66026000</h3>
         <h3>Name: Kittisak Wongraja</h3>
@@ -106,12 +126,12 @@ export default function Home({ allPostsData }) {
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 1rem;
+          gap: 2rem;
           padding: 1rem;
           background: #f4f4f4;
           border-radius: 2rem;
           margin-bottom: 2rem;
-          
+          font-size: 5rem; /* เพิ่มขนาดฟอนต์ของไอคอน */
         }
 
         .icon-wrapper {
@@ -143,7 +163,11 @@ export default function Home({ allPostsData }) {
           color: white
         }
         
-        
+        .flex {
+          display: grid;
+          display: flex;
+          gap: 1rem;
+        }
 
         .icon-label {
           position: absolute;
@@ -212,9 +236,19 @@ export default function Home({ allPostsData }) {
 
         .project-item {
           padding: 1rem;
-          background: #f4f4f4;
+          background: #000000;
           border-radius: 2rem;
           text-align: center;
+          color: #ffffff;
+
+        }
+        .project-item:hover {
+          background: #f4f4f4;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: background 0.3s ease, box-shadow 0.3s ease;
+          color: #000000;
+          
+          
         }
 
         }
