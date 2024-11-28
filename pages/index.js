@@ -107,15 +107,15 @@ export default function Home({ allPostsData }) {
         <h2>Projects</h2>
         <div className="project-grid">
           <div className="project-item">
+            <a href="https://melodytune.vercel.app/" className="no-underline">
             <h3>Project 1</h3>
-            <a href="https://melodytune.vercel.app/">
-              <img src="/images/MELODYTUNE.png" alt="Project 1"></img>
+              <img className="radius" src="/images/MELODYTUNE.png" alt="Project 1"></img>
             </a>
           </div>
           <div className="project-item">
+          <a href="https://jobhouse-supabase.vercel.app/" className="no-underline">
             <h3>Project 2</h3>
-            <a href="https://jobhouse-supabase.vercel.app/">
-              <img src="/images/Jobhouse.png" alt="Project 2"></img>
+              <img className="radius" src="/images/Jobhouse.png" alt="Project 2"></img>
             </a>
           </div>
         </div>
@@ -191,6 +191,10 @@ export default function Home({ allPostsData }) {
           border-radius: 2rem
         }
 
+        .radius {
+          border-radius: 1rem
+        }
+
         .home h1 {
           font-size: 2.5rem;
         }
@@ -250,6 +254,14 @@ export default function Home({ allPostsData }) {
           
           
         }
+        a.no-underline {
+          text-decoration: none;
+          color: inherit;
+        }
+      
+        a.no-underline:hover {
+          text-decoration: none;
+        }
 
         }
       `}</style>
@@ -265,3 +277,4 @@ export async function getStaticProps() {
     },
   };
 }
+'[ '
