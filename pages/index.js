@@ -2,11 +2,33 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
+      <header  className="navbar">
+        <nav className="navbar-container">
+          <a href="#" className="navbar-logo">
+            My Portfolio
+          </a>
+          <ul className="navbar-links margin-narbar">
+          <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
         <title>My Portfolio</title>
         <meta
           name="description"
@@ -16,7 +38,9 @@ export default function Home({ allPostsData }) {
       </Head>
 
       {/* Social Media Section */}
-      <section id="contact" className="icon">
+      <h2 id="contact">_______________________________________</h2>
+      <h2>Contact</h2>
+      <section className="icon">
         <div className="icon-wrapper">
           <a
             aria-label="true"
@@ -85,7 +109,8 @@ export default function Home({ allPostsData }) {
         </section>
 
       {/* About Section */}
-      <h2 id="about">About Me</h2>
+      <h2 id="about">_______________________________________</h2>
+      <h2 >About Me</h2>
       <section className="about">
         <h3>Student ID: 66026000</h3>
         <h3>Name: Kittisak Wongraja</h3>
@@ -103,7 +128,8 @@ export default function Home({ allPostsData }) {
       </section>
 
       {/* Projects Section */}
-      <section id="projects">
+      <h2 id="projects">_______________________________________</h2>
+      <section>
         <h2>Projects</h2>
         <div className="project-grid">
           <div className="project-item">
@@ -262,6 +288,80 @@ export default function Home({ allPostsData }) {
         a.no-underline:hover {
           text-decoration: none;
         }
+        .navbar {
+          width: 100%;
+          background: #000000;
+          padding: 1rem 2rem;
+          position: fixed;
+          top: 0;
+          height: 50px;
+          z-index: 1000;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 1200px;
+          margin-top: -1.5rem;
+        }
+
+        .navbar-logo {
+          color: #ffffff;
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-decoration: none;
+         
+          
+        }
+        .navbar-logo:hover {
+          color: #BEBEBE;
+        }
+
+        .navbar-links {
+          list-style: none;
+          display: flex;
+          gap: 1.5rem;
+        }
+
+        .navbar-links li {
+          display: inline-block;
+        }
+
+        .navbar-links a {
+          text-decoration: none;
+          color: #ffffff;
+          font-size: 1rem;
+          transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+          color: #BEBEBE;
+        }
+
+        @media (max-width: 768px) {
+          .navbar-links {
+            flex-direction: column;
+            background: #000000;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            padding: 1rem;
+            border-radius: 0 0 5px 5px;
+            display: none;
+          
+          }
+
+          .navbar-links.show {
+            display: flex;
+          }
+
+          .navbar-logo {
+            cursor: pointer;
+          }
+
+        }
 
         }
       `}</style>
@@ -277,4 +377,3 @@ export async function getStaticProps() {
     },
   };
 }
-'[ '
