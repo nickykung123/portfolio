@@ -2,9 +2,8 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
-import { useState, useEffect } from "react";
 
-export default function Home({ allPostsData }) {
+export default function Home({}) {
   return (
     <Layout home>
       <Head>
@@ -133,13 +132,14 @@ export default function Home({ allPostsData }) {
         <h2>Projects</h2>
         <div className="project-grid">
           <div className="project-item">
-            <a href="https://melodytune.vercel.app/" className="no-underline">
+            <a aria-label="true" href="https://melodytune.vercel.app/" target="_blank" className="no-underline">
             <h3>Project 1</h3>
               <img className="radius" src="/images/MELODYTUNE.png" alt="Project 1"></img>
             </a>
           </div>
           <div className="project-item">
-          <a href="https://jobhouse-supabase.vercel.app/" className="no-underline">
+          <a aria-label="true" href="https://jobhouse-supabase.vercel.app/" target="_blank"
+            className="no-underline">
             <h3>Project 2</h3>
               <img className="radius" src="/images/Jobhouse.png" alt="Project 2"></img>
             </a>
@@ -303,7 +303,7 @@ export default function Home({ allPostsData }) {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          max-width: 1200px;
+          max-width: auto;
           margin-top: -1.5rem;
         }
 
