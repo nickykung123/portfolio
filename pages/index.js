@@ -1,15 +1,14 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
-import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
-
+import { FaBars, FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 
 
 export default function Home({}) {
   return (
     <Layout home>
       <Head>
-      <header  className="navbar">
+      <header className="navbar">
         <nav className="navbar-container">
           <a href="#" className="navbar-logo">
             My Portfolio
@@ -104,6 +103,13 @@ export default function Home({}) {
         </a>
         <a href="#projects" className="cta-button">
           View Projects
+        </a>
+        <a aria-label="true"
+            href="https://github.com/nickykung123/portfolio"
+            target="_blank"
+            rel=""
+            className="cta-button">
+          Github connect Vercel
         </a>
         </section>
         
@@ -234,13 +240,20 @@ export default function Home({}) {
 
         .cta-button {
           display: inline-block;
-          padding: 1rem 1.5rem;
+          padding: 0.5rem 1rem;
           background: #000000;
           color: #fff;
           text-decoration: none;
           border-radius: 5px;
           transition: background 0.5s;
+          box-sizing: border-box;
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 1rem;
         }
+        
+        
+        
 
         .cta-button:hover {
           background: #FFFFFF;
@@ -326,6 +339,7 @@ export default function Home({}) {
           list-style: none;
           display: flex;
           gap: 1.5rem;
+          font-weight: bold;
         }
 
         .navbar-links li {
