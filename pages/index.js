@@ -3,6 +3,8 @@ import Layout from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 
+
+
 export default function Home({}) {
   return (
     <Layout home>
@@ -81,18 +83,18 @@ export default function Home({}) {
       {/* Home Section */}
       <section className="home">
         <h1>Welcome to My Portfolio</h1>
-        <p>
+        <h4>
         Hello, today I'm going to present my portfolio. My Portfolio will consist of contact , about me and Projects.
-        </p>
-        <p>
+        </h4>
+        <h4>
         Contact Information - you can reach me.
-        </p>
-        <p>
+        </h4>
+        <h4>
           About Me - a glimpse into my background.
-        </p>
-        <p>
+        </h4>
+        <h4>
         Projects - the work I'm most proud of.
-        </p>
+        </h4>
         <section className="flex">
         <a href="#contact" className="cta-button">
           View Contact
@@ -232,8 +234,7 @@ export default function Home({}) {
 
         .cta-button {
           display: inline-block;
-          margin-top: 1rem;
-          padding: 0.5rem 1.5rem;
+          padding: 1rem 1.5rem;
           background: #000000;
           color: #fff;
           text-decoration: none;
@@ -297,7 +298,9 @@ export default function Home({}) {
           height: 50px;
           z-index: 1000;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          background: rgba(0, 0, 0, 0.7);
         }
+
 
         .navbar-container {
           display: flex;
