@@ -109,7 +109,7 @@ export default function Home({}) {
             target="_blank"
             rel=""
             className="cta-button">
-          Github connect Vercel
+          Github connect Vercel...
         </a>
         </section>
         
